@@ -1,7 +1,6 @@
 from flask import Flask, request, jsonify
 from pytube import YouTube
-import os
-from pathlib import Path
+
 
 app = Flask(__name__)
 
@@ -15,10 +14,6 @@ def youtube():
     # print(downloads);
     path = "/Users/sameer/Documents/YouTube_mobile/YouTUBE_APP/backend/downloads"
     yt = YouTube(youtube_link).streams.first().download(path)
-    # files =
-    for file in os.listdir(path):
-        print(file)
-    # print(youtube_link)
     views = YouTube(youtube_link).views
     thumbnail = YouTube(youtube_link).thumbnail_url
     title = YouTube(youtube_link).title
