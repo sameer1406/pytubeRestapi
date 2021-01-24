@@ -12,8 +12,7 @@ def youtube():
     youtube_link = youtube_link_request['link']
     # downloads = youtube_link_request['path']
     # print(downloads);
-    path = "/Users/sameer/Documents/YouTube_mobile/YouTUBE_APP/backend/downloads"
-    yt = YouTube(youtube_link).streams.first().download(path)
+    yt = YouTube(youtube_link).streams.first().download()
     views = YouTube(youtube_link).views
     thumbnail = YouTube(youtube_link).thumbnail_url
     title = YouTube(youtube_link).title
