@@ -1,0 +1,4 @@
+pytube3==9.6.4
+Flask==1.1.2
+pytube==10.4.1
+gunicorn
