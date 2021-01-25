@@ -1,8 +1,12 @@
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, render_template
 from pytube import YouTube
 
-
 app = Flask(__name__)
+
+
+@app.route('/', methods=["GET"])
+def index():
+    return render_template('home.html')
 
 
 @app.route('/Youtube', methods=["POST"])
@@ -12,6 +16,7 @@ def youtube():
     youtube_link = youtube_link_request['link']
     # downloads = youtube_link_request['path']
     # print(downloads);
+    path = "/Users/sameer/Documents/YouTube_mobile/YouTUBE_APP/backend/downloads"
     yt = YouTube(youtube_link).streams.first().download()
     views = YouTube(youtube_link).views
     thumbnail = YouTube(youtube_link).thumbnail_url
