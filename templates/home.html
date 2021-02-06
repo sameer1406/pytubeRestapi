@@ -1,1 +1,19 @@
-<h1>Welcome to the HomePage!</h1>
+{% extends "base.html" %}
+{% block title %}CodeGizmos||HomePage{% endblock %}
+{% block content %}
+<form action="" method="post">
+<!--  <div class="form-group">-->
+<!--    <label for="exampleInputEmail1">YouTube Link</label>-->
+<!--    <input type="text" name="youtubelink" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Paste Your Youtube Link here" required>-->
+<!--    <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>-->
+  <label for="basic-url">Your Youtube URL</label>
+
+<div class="input-group mb-3">
+  <div class="input-group-prepend">
+    <span class="input-group-text" id="basic-addon3">https://www.youtube.com/watch?v=2343gdd</span>
+  </div>
+  <input type="text" name="youtubelink" class="form-control" id="basic-url" aria-describedby="basic-addon3">
+</div>
+  <button type="submit" class="btn btn-primary">Submit</button>
+</form>
+{% endblock %}
