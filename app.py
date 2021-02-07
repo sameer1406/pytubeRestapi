@@ -1,12 +1,10 @@
 from flask import Flask, request, jsonify, render_template, send_file
 from pytube import YouTube
-from flask_bootstrap import Bootstrap
 import os
-from flask_wtf import FlaskForm
+
 
 app = Flask(__name__)
 app.secret_key = 'the random string'
-Bootstrap(app)
 
 
 @app.route('/', methods=["POST", "GET"])
